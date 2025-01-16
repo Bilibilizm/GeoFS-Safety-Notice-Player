@@ -311,7 +311,7 @@
             const index = videoList.findIndex(video => video.name === name);
             if (index !== -1) {
                 videoList.splice(index, 1);
-                localStorage.removeItem(name);
+                localStorage.removeItem(name); // 从 localStorage 中移除
             }
         });
 
@@ -393,7 +393,7 @@
 
     resizeHandle.addEventListener('mousedown', function (event) {
         isResizing = true;
-        event.stopPropagation();
+        event.stopPropagation(); // 阻止事件冒泡
     });
 
     document.addEventListener('mousemove', function (event) {
@@ -409,7 +409,7 @@
         isResizing = false;
     });
 
-    // 输入框优化
+    // 输入框优化：点击输入框时自动暂停游戏，点击输入框外时自动取消暂停
     nameInput.addEventListener('focus', function () {
         document.dispatchEvent(new KeyboardEvent('keydown', { key: 'p' }));
     });
