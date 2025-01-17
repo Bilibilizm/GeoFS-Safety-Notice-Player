@@ -6,7 +6,6 @@ Please find a suitable video from the video platform, search for video download 
 
 
 
-Complete tutorial to be written tomorrow
 
 
 
